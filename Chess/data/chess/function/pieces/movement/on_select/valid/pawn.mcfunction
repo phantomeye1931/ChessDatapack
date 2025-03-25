@@ -1,0 +1,3 @@
+# Movement options
+execute align y positioned ^ ^ ^1 unless entity @n[tag=piece,distance=...2] if block ~ ~-.5 ~ #board run function chess:pieces/movement/on_select/validate_spot
+execute if entity @s[tag=!moved] align y positioned ^ ^ ^1 unless entity @n[tag=piece,distance=...2] positioned ^ ^ ^1 unless entity @n[tag=piece,distance=...2] if block ~ ~-.5 ~ #board run function chess:pieces/movement/on_select/validate_spot
