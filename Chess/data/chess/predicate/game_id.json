@@ -1,0 +1,24 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+        "chess.gameID": {
+            "min": {
+                "score": "chess.gameID",
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$this"
+                }
+            },
+            "max": {
+                "score": "chess.gameID",
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$this"
+                }
+            }
+        }
+    }
+}
