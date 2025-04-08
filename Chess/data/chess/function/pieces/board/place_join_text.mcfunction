@@ -1,0 +1,10 @@
+# Kill old text
+execute if entity @p[team=White, predicate=chess:game_id] if entity @p[team=Black, predicate=chess:game_id] run kill @e[type=text_display, tag=chess.joinText]
+
+# Already has a player
+execute if entity @p[team=White, predicate=chess:game_id] at @n[type=interaction, tag=chess.king, tag=chess.white, tag=chess.gameNotStarted, predicate=chess:game_id] positioned ~ ~2 ~ run function chess:pieces/board/set_join_text {"NBT":'{billboard:"center", shadow:1b, alignment:"center", background:0, text:[{"bold":true, "text":"WHITE\n", "color":"#e6e2e6"}, {"selector":"@p[team=White, predicate=chess:game_id]", "color":"#babbc0"}], Tags:["chess.text", "chess.joinText"]}'}
+execute if entity @p[team=Black, predicate=chess:game_id] at @n[type=interaction, tag=chess.king, tag=chess.black, tag=chess.gameNotStarted, predicate=chess:game_id] positioned ~ ~2 ~ run function chess:pieces/board/set_join_text {"NBT":'{billboard:"center", shadow:1b, alignment:"center", background:0, text:[{"bold":true, "text":"BLACK\n", "color":"#a9aca9"}, {"selector":"@p[team=Black, predicate=chess:game_id]", "color":"#6e6e6e"}], Tags:["chess.text", "chess.joinText"]}'}
+
+# Needs a player
+execute unless entity @p[team=White, predicate=chess:game_id] at @n[type=interaction, tag=chess.king, tag=chess.white, tag=chess.gameNotStarted, predicate=chess:game_id] positioned ~ ~2 ~ run function chess:pieces/board/set_join_text {"NBT":'{billboard:"center", shadow:1b, alignment:"center", background:0, text:[{"bold":true, "text":"WHITE\n", "color":"#e6e2e6"}, {"text":"Click to join", "color":"#babbc0"}], Tags:["chess.text", "chess.joinText"]}'}
+execute unless entity @p[team=Black, predicate=chess:game_id] at @n[type=interaction, tag=chess.king, tag=chess.black, tag=chess.gameNotStarted, predicate=chess:game_id] positioned ~ ~2 ~ run function chess:pieces/board/set_join_text {"NBT":'{billboard:"center", shadow:1b, alignment:"center", background:0, text:[{"bold":true, "text":"BLACK\n", "color":"#a9aca9"}, {"text":"Click to join", "color":"#6e6e6e"}], Tags:["chess.text", "chess.joinText"]}'}

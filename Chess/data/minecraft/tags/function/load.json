@@ -1,5 +1,7 @@
 {
-  "values": [
-    "chess:on_load"
-  ]
+    "values": [
+        "animated_java:global/on_load",
+        "animated_java:global/internal/gu/load",
+        "chess:on_load"
+    ]
 }
