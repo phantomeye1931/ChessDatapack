@@ -1,1 +1,11 @@
+# IDE folders
 .history/
+.idea/
+
+# Map-specific data
+looking_filtered/
+
+Chess/animated_java/
+Chess/data/animated_java/
+
+*.ajmeta
