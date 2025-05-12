@@ -30,7 +30,7 @@ tag @s add chess.moved
 execute as @e[type=marker, tag=chess.boardData, predicate=chess:game_id] run function chess:core/switch_turns
 
 # Start post-move actions
-function chess:pieces/movement/post_move/post_move
+function chess:game/movement/post_move/post_move
 
 # Destroy captured piece
 execute as @n[type=interaction, tag=chess.moveHere, tag=chess.piece, predicate=chess:game_id] run function chess:core/destroy_piece
@@ -39,3 +39,6 @@ execute as @n[type=interaction, tag=chess.moveHere, tag=chess.piece, predicate=c
 execute as @n[type=interaction, tag=chess.enPassantTest, predicate=chess:game_id] at @s positioned ^ ^ ^-1 if entity @n[type=interaction, tag=chess.pawn, distance=...5, predicate=chess:game_id] run function chess:core/destroy_piece
 
 tag @e[type=interaction] remove chess.enPassantTest
+
+# Refresh animations
+function chess:core/animate

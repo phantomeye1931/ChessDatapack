@@ -1,6 +1,3 @@
-# Switch turns
-execute as @e[type=marker, tag=chess.boardData] if score @s chess.gameID = @n[type=interaction, tag=here] chess.gameID run function chess:core/switch_turns
-
 # Cutesy particles :3
 # execute at @s run particle sonic_boom ~ ~.5 ~ 0 0 0 0 1
 execute at @s run playsound minecraft:block.stone.hit block @a ~ ~ ~ 1 1.4

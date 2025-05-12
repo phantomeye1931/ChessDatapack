@@ -1,0 +1,5 @@
+execute if entity @s[tag=chess.traffic.left, tag=!chess.traffic.optional] at @s as @n[tag=chess.traffic.car] rotated as @s positioned ^5 ^ ^7 align xz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~ ~-90 ~
+execute if entity @s[tag=chess.traffic.right, tag=!chess.traffic.optional] at @s as @n[tag=chess.traffic.car] rotated as @s positioned ^-5 ^ ^7 align xz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~ ~90 ~
+
+execute if entity @s[tag=chess.traffic.left, tag=chess.traffic.optional] at @s as @n[tag=chess.traffic.car, distance=..0.6, predicate=chess:50p] rotated as @s positioned ^5 ^ ^7 align xz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~ ~-90 ~
+execute if entity @s[tag=chess.traffic.right, tag=chess.traffic.optional] at @s as @n[tag=chess.traffic.car, distance=..0.6, predicate=chess:50p] rotated as @s positioned ^-5 ^ ^7 align xz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~ ~90 ~

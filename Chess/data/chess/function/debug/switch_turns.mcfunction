@@ -1,0 +1,1 @@
+execute as @n[tag=chess.boardData] at @s run function chess:core/switch_turns

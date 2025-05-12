@@ -1,5 +1,5 @@
 # A piece was selected
-execute if entity @s[tag=!chess.gameNotStarted, tag=chess.piece, tag=!chess.capturable] run function chess:pieces/movement/on_select/click_piece
+execute if entity @s[tag=!chess.gameNotStarted, tag=chess.piece, tag=!chess.capturable] run function chess:game/movement/on_select/click_piece
 
 # A valid spot, or attackable piece was selected
 execute if entity @s[tag=!chess.gameNotStarted, tag=chess.piece, tag=chess.capturable] run tag @s add chess.moveHere
@@ -9,4 +9,7 @@ execute if entity @s[tag=!chess.gameNotStarted, tag=chess.piece, tag=chess.captu
 execute if entity @s[tag=!chess.gameNotStarted, tag=chess.validSpot] as @n[type=interaction, tag=chess.selected] run function chess:core/click_spot
 
 # A player is trying to join a team
-execute if entity @s[tag=chess.gameNotStarted, tag=chess.king] run function chess:pieces/board/join_team
+execute if entity @s[tag=chess.gameNotStarted, tag=chess.king] run function chess:game/board/join_team
+
+# Refresh animations
+function chess:core/animate

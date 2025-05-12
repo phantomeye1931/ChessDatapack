@@ -1,0 +1,1 @@
+execute as @e[tag=chess.placement] run data merge entity @s {Invisible:1b, Marker:1b, CustomNameVisible:0b}

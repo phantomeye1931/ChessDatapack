@@ -1,0 +1,1 @@
+tag @e[distance=..20] remove chess.gameFinished

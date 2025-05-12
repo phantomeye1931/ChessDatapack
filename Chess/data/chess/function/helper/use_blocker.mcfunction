@@ -1,0 +1,1 @@
+execute positioned ~ ~-0.1 ~ align xyz positioned ~.5 ~ ~.5 run summon interaction ~ ~-.1 ~ {width:1.2f, height:1.2f, Tags:["chess.interactionBlocker"]}

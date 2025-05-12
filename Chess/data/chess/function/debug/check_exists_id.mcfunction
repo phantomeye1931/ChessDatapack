@@ -1,0 +1,1 @@
+$execute as @e[scores={chess.gameID=$(ID)},tag=chess.boardData] run say I exist!
